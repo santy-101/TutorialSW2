@@ -1,26 +1,19 @@
 package com.epn;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import javax.swing.JOptionPane;
 
 public class AplicacionSuma {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		// TODO Auto-generated method stub
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
-		int x, y;
-		System.out.println("Ingrese el primer Entero:");
-		x = Integer.parseInt( br.readLine());
-		
-		System.out.println("Ingrese el segundo Entero: ");
-		y= Integer.parseInt( br.readLine());
-		
+int x, y;
+		x= Integer.parseInt(JOptionPane.showInputDialog("Ingrese el primer entero: "));
+		y= Integer.parseInt(JOptionPane.showInputDialog("Ingrese el segundo entero: "));
+
+
 		Entero numero1 = new Entero(x, y);
-		
-		System.out.println("El resultado de la suma de los dos enteros es: " + numero1.sumar());
+		JOptionPane.showMessageDialog(null, "La suma de los dos enteros es: "+numero1.sumar());
 
 	}
-
 }
