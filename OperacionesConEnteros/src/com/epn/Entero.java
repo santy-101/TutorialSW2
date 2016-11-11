@@ -36,5 +36,9 @@ public class Entero {
 		return (this.x-this.y);
 	}
 	
+	public int multiplicar()
+	{
+		return (this.x*this.y);
+	}
 
 }
